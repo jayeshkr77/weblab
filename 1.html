@@ -2,7 +2,16 @@
 	<head>
 		<title>calc</title>
 		<style>
-		
+			table,th,td{
+				width:33%;
+				background-color:DarkGrey;
+				border:1px solid black;
+				border-collapse:collapse;
+				padding:5px 10px;
+			}
+			table{
+				margin:10% auto;
+			}
 		</style>
 	</head>
 	<body>
@@ -29,18 +38,31 @@
 		
 		<script>
 			function calc(id){
-				var val1 = parseInt(document.getElementById("val1").value);
-				var val2 = parseInt(document.getElementById("val2").value);
+				var val1 =document.getElementById("val1").value;
+				var val2 =document.getElementById("val2").value;
+
+				
 				if(isNaN(val1)||isNaN(val2))
 					alert("Enter valid number");
-				else if(id == "add")
+				else
+				{
+				var val1=parseFloat(val1);
+				var val2=parseFloat(val2);
+				if(id == "add")
 					document.getElementById("ans").value=(val1+val2);
 				else if(id == "sub")
 					document.getElementById("ans").value=(val1-val2);
 				else if(id == "mul")
 					document.getElementById("ans").value=(val1*val2);
 				else if(id == "div")
-					document.getElementById("ans").value=(val1/val2);				
+					document.getElementById("ans").value=(val1/val2);	
+				}			
+			}
+			
+			function cls(){
+				document.getElementById("ans").value="";
+				document.getElementById("val1").value="";
+				document.getElementById("val2").value="";
 			}
 		</script>
 	</body>
