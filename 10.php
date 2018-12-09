@@ -17,7 +17,7 @@
 	<body>
 		<?php
 			$a=[];
-			$conn = mysqli_connect('139.59.66.232','harsh','bjn721','weblab');
+			$conn = mysqli_connect('139.59.66.232','harsh','yourpassword','weblab');
 			if($conn->connect_error){
 				die("connection error ".$conn->connect_error);
 			}
