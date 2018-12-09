@@ -1,0 +1,26 @@
+<html>
+	<head></head>
+	
+	<body>
+		<p id="demo"></p>
+		<script>
+			var ids=document.getElementById("demo");
+			var fs=5;
+			var var1 = setInterval(function(){
+				ids.innerHTML="TEXT GROWING.";
+				ids.setAttribute("style","font-size:"+fs+"px;color:red");
+				fs+=5;
+				if(fs>50){
+					clearInterval(var1);
+					var var2 = setInterval(function(){
+						ids.innerHTML="TEXT SHRINKING";
+						fs-=5;
+						ids.setAttribute("style","font-size:"+fs+"px;color:red");
+						if(fs<=5)
+							clearInterval(var2);
+					},1000)
+				}
+			},1000);
+		</script>
+	</body>
+</html>

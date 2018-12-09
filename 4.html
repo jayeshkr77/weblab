@@ -1,0 +1,27 @@
+<html>
+	<head>
+	
+	</head>
+	
+	<body>	
+		<script>
+			var str = prompt("Enter Input");
+			if(!isNaN(str)){
+				var a = str.split("");
+				var b = a.reverse();
+				var c = b.join("");
+				alert("Reverse of "+str+" is "+c);
+			}
+			else{
+				str=str.toUpperCase();
+				for(var i=0;i<str.length;i++){
+					var c = str.charAt(i);
+					if(c=='A'||c=='E'||c=='I'||c=='O'||c=='U'){
+						break;	
+					}
+				}
+				alert("leftmost position of vowel is : "+(i+1));
+			}
+		</script>
+	</body>
+<html>
